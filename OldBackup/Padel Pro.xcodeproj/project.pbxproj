@@ -1,0 +1,944 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C3F88CC2AD2A02F00A43199 /* PadelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F88CB2AD2A02F00A43199 /* PadelApp.swift */; };
+		4C3F88CE2AD2A02F00A43199 /* ComingSoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F88CD2AD2A02F00A43199 /* ComingSoon.swift */; };
+		4C3F88D02AD2A03000A43199 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C3F88CF2AD2A03000A43199 /* Assets.xcassets */; };
+		4C3F88D32AD2A03000A43199 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C3F88D22AD2A03000A43199 /* Preview Assets.xcassets */; };
+		4C3F88D92AD2A03000A43199 /* Padel Pro Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4C3F88D82AD2A03000A43199 /* Padel Pro Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4C3F88DE2AD2A03000A43199 /* PadelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F88DD2AD2A03000A43199 /* PadelApp.swift */; };
+		4C3F88E02AD2A03000A43199 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F88DF2AD2A03000A43199 /* ContentView.swift */; };
+		4C3F88E22AD2A03100A43199 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C3F88E12AD2A03100A43199 /* Assets.xcassets */; };
+		4C3F88E52AD2A03100A43199 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C3F88E42AD2A03100A43199 /* Preview Assets.xcassets */; };
+		4C3F88F22AD2A57E00A43199 /* WorkoutTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F88F12AD2A57E00A43199 /* WorkoutTabView.swift */; };
+		4C3F88F42AD2A5A000A43199 /* Controls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F88F32AD2A5A000A43199 /* Controls.swift */; };
+		4C3F88F62AD2A5C800A43199 /* LiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F88F52AD2A5C800A43199 /* LiveActivity.swift */; };
+		4C3F88F82AD2A5D500A43199 /* LiveScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F88F72AD2A5D500A43199 /* LiveScore.swift */; };
+		4C3F88FA2AD2AE1700A43199 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F88F92AD2AE1700A43199 /* SessionManager.swift */; };
+		4C3F88FC2AD473E300A43199 /* SessionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F88FB2AD473E300A43199 /* SessionData.swift */; };
+		4C3F88FE2AD5E83000A43199 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F88FD2AD5E83000A43199 /* WorkoutManager.swift */; };
+		4C3F89052AD733E600A43199 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F89042AD733E600A43199 /* Home.swift */; };
+		4C3F89072AD7393200A43199 /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F89062AD7393200A43199 /* Teams.swift */; };
+		4C3F89092AD739D300A43199 /* Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F89082AD739D300A43199 /* Start.swift */; };
+		4C3F890B2AD7C43300A43199 /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F890A2AD7C43300A43199 /* Summary.swift */; };
+		4C40533E2AE3F646001296B0 /* Controls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C40533D2AE3F646001296B0 /* Controls.swift */; };
+		4C4053402AE415F7001296B0 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C40533F2AE415F7001296B0 /* Metrics.swift */; };
+		4C4E1FA42AD86D7900D08591 /* LoggerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4E1FA32AD86D7900D08591 /* LoggerExtensions.swift */; };
+		4C73079B2AE1B652009AADD5 /* PulsingHeart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73079A2AE1B652009AADD5 /* PulsingHeart.swift */; };
+		4C73079C2AE1B652009AADD5 /* PulsingHeart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73079A2AE1B652009AADD5 /* PulsingHeart.swift */; };
+		4C806F772ADA8A9900CC127B /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C806F762ADA8A9900CC127B /* Bubble.swift */; };
+		4C806F782ADA8A9900CC127B /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C806F762ADA8A9900CC127B /* Bubble.swift */; };
+		4C986D022ADBC607002ED214 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C986D012ADBC607002ED214 /* StartView.swift */; };
+		4C986D052ADBDB3B002ED214 /* MirroringWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C986D042ADBDB3B002ED214 /* MirroringWorkoutView.swift */; };
+		4CC5AB892ADB0BCB0071D8E9 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC5AB882ADB0BCB0071D8E9 /* WidgetKit.framework */; };
+		4CC5AB8B2ADB0BCB0071D8E9 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC5AB8A2ADB0BCB0071D8E9 /* SwiftUI.framework */; };
+		4CC5AB8E2ADB0BCB0071D8E9 /* Padel_Pro_Watch_App_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5AB8D2ADB0BCB0071D8E9 /* Padel_Pro_Watch_App_Widget.swift */; };
+		4CC5AB902ADB0BCC0071D8E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CC5AB8F2ADB0BCC0071D8E9 /* Assets.xcassets */; };
+		4CC5AB942ADB0BCC0071D8E9 /* Padel Pro Watch App WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4CC5AB862ADB0BCB0071D8E9 /* Padel Pro Watch App WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4CC5AB9A2ADB0C260071D8E9 /* PadelProTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5AB992ADB0C260071D8E9 /* PadelProTimelineProvider.swift */; };
+		4CC5AB9C2ADB10BB0071D8E9 /* PadelProWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5AB9B2ADB10BB0071D8E9 /* PadelProWidgetView.swift */; };
+		4CC5AB9F2ADB284F0071D8E9 /* WorkoutManager+watchOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5AB9E2ADB284F0071D8E9 /* WorkoutManager+watchOS.swift */; };
+		4CC5ABA02ADB2D550071D8E9 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F88FD2AD5E83000A43199 /* WorkoutManager.swift */; };
+		4CC5ABA12ADB2D780071D8E9 /* LoggerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4E1FA32AD86D7900D08591 /* LoggerExtensions.swift */; };
+		4CC5ABA32ADB2DAF0071D8E9 /* WorkoutManager+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5ABA22ADB2DAF0071D8E9 /* WorkoutManager+iOS.swift */; };
+		4CC5ABA52ADB2F170071D8E9 /* WorkoutManager+Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5ABA42ADB2F170071D8E9 /* WorkoutManager+Statistics.swift */; };
+		4CC5ABA62ADB2F170071D8E9 /* WorkoutManager+Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5ABA42ADB2F170071D8E9 /* WorkoutManager+Statistics.swift */; };
+		4CC5ABA82ADB2FF30071D8E9 /* ElapsedTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5ABA72ADB2FF30071D8E9 /* ElapsedTimeView.swift */; };
+		4CC5ABA92ADB2FF30071D8E9 /* ElapsedTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5ABA72ADB2FF30071D8E9 /* ElapsedTimeView.swift */; };
+		4CC5ABAB2ADB309F0071D8E9 /* LiveActivityTimelineSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5ABAA2ADB309F0071D8E9 /* LiveActivityTimelineSchedule.swift */; };
+		4CC5ABAC2ADB309F0071D8E9 /* LiveActivityTimelineSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5ABAA2ADB309F0071D8E9 /* LiveActivityTimelineSchedule.swift */; };
+		4CC5ABAE2ADB317D0071D8E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5ABAD2ADB317D0071D8E9 /* AppDelegate.swift */; };
+		4CC5ABB02ADB39C80071D8E9 /* ActivityRings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5ABAF2ADB39C80071D8E9 /* ActivityRings.swift */; };
+		4CC5ABB12ADB3C7A0071D8E9 /* SessionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F88FB2AD473E300A43199 /* SessionData.swift */; };
+		4CC5ABB22ADB3C7C0071D8E9 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F88F92AD2AE1700A43199 /* SessionManager.swift */; };
+		4CF002072AE071F300D96D6F /* LiveScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF002062AE071F300D96D6F /* LiveScore.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4C3F88DA2AD2A03000A43199 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C3F88C02AD2A02F00A43199 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C3F88D72AD2A03000A43199;
+			remoteInfo = "Padel Watch App";
+		};
+		4CC5AB922ADB0BCC0071D8E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C3F88C02AD2A02F00A43199 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CC5AB852ADB0BCB0071D8E9;
+			remoteInfo = "Padel Pro Watch App WidgetExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4C3F88EB2AD2A03100A43199 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				4C3F88D92AD2A03000A43199 /* Padel Pro Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CC5AB952ADB0BCC0071D8E9 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4CC5AB942ADB0BCC0071D8E9 /* Padel Pro Watch App WidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4C3F88C82AD2A02F00A43199 /* Padel Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Padel Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C3F88CB2AD2A02F00A43199 /* PadelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadelApp.swift; sourceTree = "<group>"; };
+		4C3F88CD2AD2A02F00A43199 /* ComingSoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoon.swift; sourceTree = "<group>"; };
+		4C3F88CF2AD2A03000A43199 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C3F88D22AD2A03000A43199 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4C3F88D82AD2A03000A43199 /* Padel Pro Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Padel Pro Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C3F88DD2AD2A03000A43199 /* PadelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadelApp.swift; sourceTree = "<group>"; };
+		4C3F88DF2AD2A03000A43199 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4C3F88E12AD2A03100A43199 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C3F88E42AD2A03100A43199 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4C3F88F12AD2A57E00A43199 /* WorkoutTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTabView.swift; sourceTree = "<group>"; };
+		4C3F88F32AD2A5A000A43199 /* Controls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controls.swift; sourceTree = "<group>"; };
+		4C3F88F52AD2A5C800A43199 /* LiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivity.swift; sourceTree = "<group>"; };
+		4C3F88F72AD2A5D500A43199 /* LiveScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveScore.swift; sourceTree = "<group>"; };
+		4C3F88F92AD2AE1700A43199 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		4C3F88FB2AD473E300A43199 /* SessionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionData.swift; sourceTree = "<group>"; };
+		4C3F88FD2AD5E83000A43199 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		4C3F88FF2AD7140D00A43199 /* Padel Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Padel Watch App.entitlements"; sourceTree = "<group>"; };
+		4C3F89002AD7141700A43199 /* Padel Pro-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Padel Pro-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		4C3F89042AD733E600A43199 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		4C3F89062AD7393200A43199 /* Teams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
+		4C3F89082AD739D300A43199 /* Start.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start.swift; sourceTree = "<group>"; };
+		4C3F890A2AD7C43300A43199 /* Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
+		4C40533D2AE3F646001296B0 /* Controls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controls.swift; sourceTree = "<group>"; };
+		4C40533F2AE415F7001296B0 /* Metrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metrics.swift; sourceTree = "<group>"; };
+		4C4E1FA32AD86D7900D08591 /* LoggerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerExtensions.swift; sourceTree = "<group>"; };
+		4C73079A2AE1B652009AADD5 /* PulsingHeart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsingHeart.swift; sourceTree = "<group>"; };
+		4C806F752ADA735800CC127B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4C806F762ADA8A9900CC127B /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
+		4C986D012ADBC607002ED214 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		4C986D032ADBDA81002ED214 /* Padel Pro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Padel Pro.entitlements"; sourceTree = "<group>"; };
+		4C986D042ADBDB3B002ED214 /* MirroringWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MirroringWorkoutView.swift; sourceTree = "<group>"; };
+		4CC5AB862ADB0BCB0071D8E9 /* Padel Pro Watch App WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Padel Pro Watch App WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CC5AB882ADB0BCB0071D8E9 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		4CC5AB8A2ADB0BCB0071D8E9 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		4CC5AB8D2ADB0BCB0071D8E9 /* Padel_Pro_Watch_App_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padel_Pro_Watch_App_Widget.swift; sourceTree = "<group>"; };
+		4CC5AB8F2ADB0BCC0071D8E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4CC5AB912ADB0BCC0071D8E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CC5AB992ADB0C260071D8E9 /* PadelProTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadelProTimelineProvider.swift; sourceTree = "<group>"; };
+		4CC5AB9B2ADB10BB0071D8E9 /* PadelProWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadelProWidgetView.swift; sourceTree = "<group>"; };
+		4CC5AB9E2ADB284F0071D8E9 /* WorkoutManager+watchOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkoutManager+watchOS.swift"; sourceTree = "<group>"; };
+		4CC5ABA22ADB2DAF0071D8E9 /* WorkoutManager+iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkoutManager+iOS.swift"; sourceTree = "<group>"; };
+		4CC5ABA42ADB2F170071D8E9 /* WorkoutManager+Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkoutManager+Statistics.swift"; sourceTree = "<group>"; };
+		4CC5ABA72ADB2FF30071D8E9 /* ElapsedTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElapsedTimeView.swift; sourceTree = "<group>"; };
+		4CC5ABAA2ADB309F0071D8E9 /* LiveActivityTimelineSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityTimelineSchedule.swift; sourceTree = "<group>"; };
+		4CC5ABAD2ADB317D0071D8E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4CC5ABAF2ADB39C80071D8E9 /* ActivityRings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRings.swift; sourceTree = "<group>"; };
+		4CF002062AE071F300D96D6F /* LiveScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveScore.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4C3F88C52AD2A02F00A43199 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C3F88D52AD2A03000A43199 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CC5AB832ADB0BCB0071D8E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC5AB8B2ADB0BCB0071D8E9 /* SwiftUI.framework in Frameworks */,
+				4CC5AB892ADB0BCB0071D8E9 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C3F88BF2AD2A02F00A43199 = {
+			isa = PBXGroup;
+			children = (
+				4CC5AB9D2ADB28170071D8E9 /* Shared */,
+				4C3F88CA2AD2A02F00A43199 /* Padel Pro */,
+				4C3F88DC2AD2A03000A43199 /* Padel Pro Watch App */,
+				4CC5AB8C2ADB0BCB0071D8E9 /* Padel Pro Watch App Widget */,
+				4CC5AB872ADB0BCB0071D8E9 /* Frameworks */,
+				4C3F88C92AD2A02F00A43199 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4C3F88C92AD2A02F00A43199 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4C3F88C82AD2A02F00A43199 /* Padel Pro.app */,
+				4C3F88D82AD2A03000A43199 /* Padel Pro Watch App.app */,
+				4CC5AB862ADB0BCB0071D8E9 /* Padel Pro Watch App WidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4C3F88CA2AD2A02F00A43199 /* Padel Pro */ = {
+			isa = PBXGroup;
+			children = (
+				4C40533C2AE3F63B001296B0 /* Workout */,
+				4C986D032ADBDA81002ED214 /* Padel Pro.entitlements */,
+				4C806F752ADA735800CC127B /* Info.plist */,
+				4C3F88CB2AD2A02F00A43199 /* PadelApp.swift */,
+				4C986D012ADBC607002ED214 /* StartView.swift */,
+				4CF002062AE071F300D96D6F /* LiveScore.swift */,
+				4C3F88CD2AD2A02F00A43199 /* ComingSoon.swift */,
+				4C3F88CF2AD2A03000A43199 /* Assets.xcassets */,
+				4C3F88D12AD2A03000A43199 /* Preview Content */,
+			);
+			path = "Padel Pro";
+			sourceTree = "<group>";
+		};
+		4C3F88D12AD2A03000A43199 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4C3F88D22AD2A03000A43199 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4C3F88DC2AD2A03000A43199 /* Padel Pro Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				4C3F89002AD7141700A43199 /* Padel Pro-Watch-App-Info.plist */,
+				4C3F88FF2AD7140D00A43199 /* Padel Watch App.entitlements */,
+				4CC5ABAD2ADB317D0071D8E9 /* AppDelegate.swift */,
+				4C3F88DD2AD2A03000A43199 /* PadelApp.swift */,
+				4C3F88DF2AD2A03000A43199 /* ContentView.swift */,
+				4C3F88EF2AD2A4FD00A43199 /* Home */,
+				4C3F88F02AD2A52C00A43199 /* Workout */,
+				4C3F88E12AD2A03100A43199 /* Assets.xcassets */,
+				4C3F88E32AD2A03100A43199 /* Preview Content */,
+			);
+			path = "Padel Pro Watch App";
+			sourceTree = "<group>";
+		};
+		4C3F88E32AD2A03100A43199 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4C3F88E42AD2A03100A43199 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4C3F88EF2AD2A4FD00A43199 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4C3F89042AD733E600A43199 /* Home.swift */,
+				4C3F89062AD7393200A43199 /* Teams.swift */,
+				4C3F89082AD739D300A43199 /* Start.swift */,
+				4C806F762ADA8A9900CC127B /* Bubble.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		4C3F88F02AD2A52C00A43199 /* Workout */ = {
+			isa = PBXGroup;
+			children = (
+				4C3F88F12AD2A57E00A43199 /* WorkoutTabView.swift */,
+				4C3F88F32AD2A5A000A43199 /* Controls.swift */,
+				4C3F88F52AD2A5C800A43199 /* LiveActivity.swift */,
+				4C3F88F72AD2A5D500A43199 /* LiveScore.swift */,
+				4C3F890A2AD7C43300A43199 /* Summary.swift */,
+				4CC5ABAF2ADB39C80071D8E9 /* ActivityRings.swift */,
+			);
+			path = Workout;
+			sourceTree = "<group>";
+		};
+		4C40533C2AE3F63B001296B0 /* Workout */ = {
+			isa = PBXGroup;
+			children = (
+				4C986D042ADBDB3B002ED214 /* MirroringWorkoutView.swift */,
+				4C40533F2AE415F7001296B0 /* Metrics.swift */,
+				4C40533D2AE3F646001296B0 /* Controls.swift */,
+			);
+			path = Workout;
+			sourceTree = "<group>";
+		};
+		4C7307972AE1B614009AADD5 /* Workout */ = {
+			isa = PBXGroup;
+			children = (
+				4C3F88FD2AD5E83000A43199 /* WorkoutManager.swift */,
+				4CC5AB9E2ADB284F0071D8E9 /* WorkoutManager+watchOS.swift */,
+				4CC5ABA22ADB2DAF0071D8E9 /* WorkoutManager+iOS.swift */,
+				4CC5ABA42ADB2F170071D8E9 /* WorkoutManager+Statistics.swift */,
+			);
+			path = Workout;
+			sourceTree = "<group>";
+		};
+		4C7307982AE1B62F009AADD5 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				4C3F88FB2AD473E300A43199 /* SessionData.swift */,
+				4C3F88F92AD2AE1700A43199 /* SessionManager.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		4C7307992AE1B644009AADD5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4CC5ABA72ADB2FF30071D8E9 /* ElapsedTimeView.swift */,
+				4C73079A2AE1B652009AADD5 /* PulsingHeart.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4CC5AB872ADB0BCB0071D8E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CC5AB882ADB0BCB0071D8E9 /* WidgetKit.framework */,
+				4CC5AB8A2ADB0BCB0071D8E9 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4CC5AB8C2ADB0BCB0071D8E9 /* Padel Pro Watch App Widget */ = {
+			isa = PBXGroup;
+			children = (
+				4CC5AB8D2ADB0BCB0071D8E9 /* Padel_Pro_Watch_App_Widget.swift */,
+				4CC5AB992ADB0C260071D8E9 /* PadelProTimelineProvider.swift */,
+				4CC5AB9B2ADB10BB0071D8E9 /* PadelProWidgetView.swift */,
+				4CC5AB8F2ADB0BCC0071D8E9 /* Assets.xcassets */,
+				4CC5AB912ADB0BCC0071D8E9 /* Info.plist */,
+			);
+			path = "Padel Pro Watch App Widget";
+			sourceTree = "<group>";
+		};
+		4CC5AB9D2ADB28170071D8E9 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				4C7307992AE1B644009AADD5 /* Views */,
+				4C7307982AE1B62F009AADD5 /* Session */,
+				4C7307972AE1B614009AADD5 /* Workout */,
+				4C4E1FA32AD86D7900D08591 /* LoggerExtensions.swift */,
+				4CC5ABAA2ADB309F0071D8E9 /* LiveActivityTimelineSchedule.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4C3F88C72AD2A02F00A43199 /* Padel Pro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C3F88EC2AD2A03100A43199 /* Build configuration list for PBXNativeTarget "Padel Pro" */;
+			buildPhases = (
+				4C3F88C42AD2A02F00A43199 /* Sources */,
+				4C3F88C52AD2A02F00A43199 /* Frameworks */,
+				4C3F88C62AD2A02F00A43199 /* Resources */,
+				4C3F88EB2AD2A03100A43199 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C3F88DB2AD2A03000A43199 /* PBXTargetDependency */,
+			);
+			name = "Padel Pro";
+			productName = Padel;
+			productReference = 4C3F88C82AD2A02F00A43199 /* Padel Pro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4C3F88D72AD2A03000A43199 /* Padel Pro Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C3F88E82AD2A03100A43199 /* Build configuration list for PBXNativeTarget "Padel Pro Watch App" */;
+			buildPhases = (
+				4C3F88D42AD2A03000A43199 /* Sources */,
+				4C3F88D52AD2A03000A43199 /* Frameworks */,
+				4C3F88D62AD2A03000A43199 /* Resources */,
+				4CC5AB952ADB0BCC0071D8E9 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CC5AB932ADB0BCC0071D8E9 /* PBXTargetDependency */,
+			);
+			name = "Padel Pro Watch App";
+			productName = "Padel Watch App";
+			productReference = 4C3F88D82AD2A03000A43199 /* Padel Pro Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4CC5AB852ADB0BCB0071D8E9 /* Padel Pro Watch App WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CC5AB982ADB0BCC0071D8E9 /* Build configuration list for PBXNativeTarget "Padel Pro Watch App WidgetExtension" */;
+			buildPhases = (
+				4CC5AB822ADB0BCB0071D8E9 /* Sources */,
+				4CC5AB832ADB0BCB0071D8E9 /* Frameworks */,
+				4CC5AB842ADB0BCB0071D8E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Padel Pro Watch App WidgetExtension";
+			productName = "Padel Pro Watch App WidgetExtension";
+			productReference = 4CC5AB862ADB0BCB0071D8E9 /* Padel Pro Watch App WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4C3F88C02AD2A02F00A43199 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					4C3F88C72AD2A02F00A43199 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					4C3F88D72AD2A03000A43199 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					4CC5AB852ADB0BCB0071D8E9 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 4C3F88C32AD2A02F00A43199 /* Build configuration list for PBXProject "Padel Pro" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4C3F88BF2AD2A02F00A43199;
+			productRefGroup = 4C3F88C92AD2A02F00A43199 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4C3F88C72AD2A02F00A43199 /* Padel Pro */,
+				4C3F88D72AD2A03000A43199 /* Padel Pro Watch App */,
+				4CC5AB852ADB0BCB0071D8E9 /* Padel Pro Watch App WidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4C3F88C62AD2A02F00A43199 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C3F88D32AD2A03000A43199 /* Preview Assets.xcassets in Resources */,
+				4C3F88D02AD2A03000A43199 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C3F88D62AD2A03000A43199 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C3F88E52AD2A03100A43199 /* Preview Assets.xcassets in Resources */,
+				4C3F88E22AD2A03100A43199 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CC5AB842ADB0BCB0071D8E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC5AB902ADB0BCC0071D8E9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4C3F88C42AD2A02F00A43199 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC5ABA82ADB2FF30071D8E9 /* ElapsedTimeView.swift in Sources */,
+				4CC5ABA52ADB2F170071D8E9 /* WorkoutManager+Statistics.swift in Sources */,
+				4CF002072AE071F300D96D6F /* LiveScore.swift in Sources */,
+				4C3F88CE2AD2A02F00A43199 /* ComingSoon.swift in Sources */,
+				4C986D022ADBC607002ED214 /* StartView.swift in Sources */,
+				4CC5ABA32ADB2DAF0071D8E9 /* WorkoutManager+iOS.swift in Sources */,
+				4CC5ABA02ADB2D550071D8E9 /* WorkoutManager.swift in Sources */,
+				4C986D052ADBDB3B002ED214 /* MirroringWorkoutView.swift in Sources */,
+				4CC5ABAB2ADB309F0071D8E9 /* LiveActivityTimelineSchedule.swift in Sources */,
+				4C73079B2AE1B652009AADD5 /* PulsingHeart.swift in Sources */,
+				4CC5ABB12ADB3C7A0071D8E9 /* SessionData.swift in Sources */,
+				4C806F772ADA8A9900CC127B /* Bubble.swift in Sources */,
+				4CC5ABA12ADB2D780071D8E9 /* LoggerExtensions.swift in Sources */,
+				4C4053402AE415F7001296B0 /* Metrics.swift in Sources */,
+				4C40533E2AE3F646001296B0 /* Controls.swift in Sources */,
+				4C3F88CC2AD2A02F00A43199 /* PadelApp.swift in Sources */,
+				4CC5ABB22ADB3C7C0071D8E9 /* SessionManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C3F88D42AD2A03000A43199 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C3F88E02AD2A03000A43199 /* ContentView.swift in Sources */,
+				4CC5AB9F2ADB284F0071D8E9 /* WorkoutManager+watchOS.swift in Sources */,
+				4C806F782ADA8A9900CC127B /* Bubble.swift in Sources */,
+				4C3F88F42AD2A5A000A43199 /* Controls.swift in Sources */,
+				4C3F89052AD733E600A43199 /* Home.swift in Sources */,
+				4C3F890B2AD7C43300A43199 /* Summary.swift in Sources */,
+				4CC5ABB02ADB39C80071D8E9 /* ActivityRings.swift in Sources */,
+				4C3F88FE2AD5E83000A43199 /* WorkoutManager.swift in Sources */,
+				4C3F89092AD739D300A43199 /* Start.swift in Sources */,
+				4C73079C2AE1B652009AADD5 /* PulsingHeart.swift in Sources */,
+				4CC5ABAE2ADB317D0071D8E9 /* AppDelegate.swift in Sources */,
+				4C3F88FC2AD473E300A43199 /* SessionData.swift in Sources */,
+				4C3F89072AD7393200A43199 /* Teams.swift in Sources */,
+				4C4E1FA42AD86D7900D08591 /* LoggerExtensions.swift in Sources */,
+				4C3F88DE2AD2A03000A43199 /* PadelApp.swift in Sources */,
+				4C3F88F22AD2A57E00A43199 /* WorkoutTabView.swift in Sources */,
+				4C3F88F82AD2A5D500A43199 /* LiveScore.swift in Sources */,
+				4CC5ABA62ADB2F170071D8E9 /* WorkoutManager+Statistics.swift in Sources */,
+				4C3F88F62AD2A5C800A43199 /* LiveActivity.swift in Sources */,
+				4CC5ABAC2ADB309F0071D8E9 /* LiveActivityTimelineSchedule.swift in Sources */,
+				4CC5ABA92ADB2FF30071D8E9 /* ElapsedTimeView.swift in Sources */,
+				4C3F88FA2AD2AE1700A43199 /* SessionManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CC5AB822ADB0BCB0071D8E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC5AB8E2ADB0BCB0071D8E9 /* Padel_Pro_Watch_App_Widget.swift in Sources */,
+				4CC5AB9A2ADB0C260071D8E9 /* PadelProTimelineProvider.swift in Sources */,
+				4CC5AB9C2ADB10BB0071D8E9 /* PadelProWidgetView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4C3F88DB2AD2A03000A43199 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C3F88D72AD2A03000A43199 /* Padel Pro Watch App */;
+			targetProxy = 4C3F88DA2AD2A03000A43199 /* PBXContainerItemProxy */;
+		};
+		4CC5AB932ADB0BCC0071D8E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CC5AB852ADB0BCB0071D8E9 /* Padel Pro Watch App WidgetExtension */;
+			targetProxy = 4CC5AB922ADB0BCC0071D8E9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4C3F88E62AD2A03100A43199 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		4C3F88E72AD2A03100A43199 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		4C3F88E92AD2A03100A43199 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Padel Pro Watch App/Padel Watch App.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Padel Pro Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = T2HL3ZXJQU;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Padel Pro-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Padel Pro";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your workout related data will be used to display statistics during active sessions in Padel Pro.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Workouts tracked by Padel Pro on Apple Watch will be saved to HealthKit.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.gmail.kajatin.roland.Padel;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.kajatin.roland.Padel.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		4C3F88EA2AD2A03100A43199 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Padel Pro Watch App/Padel Watch App.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Padel Pro Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = T2HL3ZXJQU;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Padel Pro-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Padel Pro";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your workout related data will be used to display statistics during active sessions in Padel Pro.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Workouts tracked by Padel Pro on Apple Watch will be saved to HealthKit.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.gmail.kajatin.roland.Padel;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.kajatin.roland.Padel.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		4C3F88ED2AD2A03100A43199 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Padel Pro/Padel Pro.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Padel Pro/Preview Content\"";
+				DEVELOPMENT_TEAM = T2HL3ZXJQU;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Padel Pro/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Padel Pro";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your workout related data will be used to display statistics during active sessions in Padel Pro.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Workouts tracked by Padel Pro on Apple Watch will be saved to HealthKit.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.kajatin.roland.Padel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		4C3F88EE2AD2A03100A43199 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Padel Pro/Padel Pro.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Padel Pro/Preview Content\"";
+				DEVELOPMENT_TEAM = T2HL3ZXJQU;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Padel Pro/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Padel Pro";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your workout related data will be used to display statistics during active sessions in Padel Pro.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Workouts tracked by Padel Pro on Apple Watch will be saved to HealthKit.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.kajatin.roland.Padel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4CC5AB962ADB0BCC0071D8E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T2HL3ZXJQU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Padel Pro Watch App Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Padel Pro Watch App Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.kajatin.roland.Padel.watchkitapp.Padel-Pro-Watch-App-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		4CC5AB972ADB0BCC0071D8E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T2HL3ZXJQU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Padel Pro Watch App Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Padel Pro Watch App Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.kajatin.roland.Padel.watchkitapp.Padel-Pro-Watch-App-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C3F88C32AD2A02F00A43199 /* Build configuration list for PBXProject "Padel Pro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C3F88E62AD2A03100A43199 /* Debug */,
+				4C3F88E72AD2A03100A43199 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C3F88E82AD2A03100A43199 /* Build configuration list for PBXNativeTarget "Padel Pro Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C3F88E92AD2A03100A43199 /* Debug */,
+				4C3F88EA2AD2A03100A43199 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C3F88EC2AD2A03100A43199 /* Build configuration list for PBXNativeTarget "Padel Pro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C3F88ED2AD2A03100A43199 /* Debug */,
+				4C3F88EE2AD2A03100A43199 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CC5AB982ADB0BCC0071D8E9 /* Build configuration list for PBXNativeTarget "Padel Pro Watch App WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CC5AB962ADB0BCC0071D8E9 /* Debug */,
+				4CC5AB972ADB0BCC0071D8E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4C3F88C02AD2A02F00A43199 /* Project object */;
+}

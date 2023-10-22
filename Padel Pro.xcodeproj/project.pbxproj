@@ -12,6 +12,25 @@
 		4CAF7BC22AE5061E000C9277 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF7BC12AE5061E000C9277 /* ContentView.swift */; };
 		4CAF7BC42AE5061F000C9277 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CAF7BC32AE5061F000C9277 /* Assets.xcassets */; };
 		4CAF7BC72AE5061F000C9277 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CAF7BC62AE5061F000C9277 /* Preview Assets.xcassets */; };
+		4CAF7BD82AE506C5000C9277 /* ElapsedTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF7BD72AE506C5000C9277 /* ElapsedTimeView.swift */; };
+		4CAF7BDA2AE506DB000C9277 /* PulsingHeart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF7BD92AE506DB000C9277 /* PulsingHeart.swift */; };
+		4CAF7BDC2AE506F2000C9277 /* SessionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF7BDB2AE506F2000C9277 /* SessionData.swift */; };
+		4CAF7BDE2AE50705000C9277 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF7BDD2AE50705000C9277 /* SessionManager.swift */; };
+		4CAF7BE02AE50716000C9277 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF7BDF2AE50716000C9277 /* WorkoutManager.swift */; };
+		4CAF7BE22AE50727000C9277 /* WorkoutManager+watchOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF7BE12AE50727000C9277 /* WorkoutManager+watchOS.swift */; };
+		4CAF7BE42AE50737000C9277 /* WorkoutManager+Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF7BE32AE50737000C9277 /* WorkoutManager+Statistics.swift */; };
+		4CAF7BE62AE50749000C9277 /* LoggerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF7BE52AE50749000C9277 /* LoggerExtension.swift */; };
+		4CAF7BE82AE50759000C9277 /* LiveActivityTimelineSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF7BE72AE50759000C9277 /* LiveActivityTimelineSchedule.swift */; };
+		4CAF7BEC2AE5077C000C9277 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF7BEB2AE5077C000C9277 /* Home.swift */; };
+		4CAF7BEE2AE50787000C9277 /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF7BED2AE50787000C9277 /* Teams.swift */; };
+		4CAF7BF02AE50794000C9277 /* Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF7BEF2AE50794000C9277 /* Start.swift */; };
+		4CAF7BF22AE507A3000C9277 /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF7BF12AE507A3000C9277 /* Bubble.swift */; };
+		4CAF7BF42AE507B6000C9277 /* WorkoutTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF7BF32AE507B6000C9277 /* WorkoutTabView.swift */; };
+		4CAF7BF62AE507BF000C9277 /* Controls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF7BF52AE507BF000C9277 /* Controls.swift */; };
+		4CAF7BF82AE507CC000C9277 /* LiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF7BF72AE507CC000C9277 /* LiveActivity.swift */; };
+		4CAF7BFA2AE507D8000C9277 /* LiveScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF7BF92AE507D8000C9277 /* LiveScore.swift */; };
+		4CAF7BFC2AE507E5000C9277 /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF7BFB2AE507E5000C9277 /* Summary.swift */; };
+		4CAF7BFE2AE507F0000C9277 /* ActivityRings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF7BFD2AE507F0000C9277 /* ActivityRings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +64,27 @@
 		4CAF7BC12AE5061E000C9277 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4CAF7BC32AE5061F000C9277 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CAF7BC62AE5061F000C9277 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4CAF7BD12AE50642000C9277 /* Padel Pro Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Padel Pro Watch App.entitlements"; sourceTree = "<group>"; };
+		4CAF7BD22AE50644000C9277 /* Padel-Pro-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Padel-Pro-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		4CAF7BD72AE506C5000C9277 /* ElapsedTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElapsedTimeView.swift; sourceTree = "<group>"; };
+		4CAF7BD92AE506DB000C9277 /* PulsingHeart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsingHeart.swift; sourceTree = "<group>"; };
+		4CAF7BDB2AE506F2000C9277 /* SessionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionData.swift; sourceTree = "<group>"; };
+		4CAF7BDD2AE50705000C9277 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		4CAF7BDF2AE50716000C9277 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		4CAF7BE12AE50727000C9277 /* WorkoutManager+watchOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkoutManager+watchOS.swift"; sourceTree = "<group>"; };
+		4CAF7BE32AE50737000C9277 /* WorkoutManager+Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkoutManager+Statistics.swift"; sourceTree = "<group>"; };
+		4CAF7BE52AE50749000C9277 /* LoggerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerExtension.swift; sourceTree = "<group>"; };
+		4CAF7BE72AE50759000C9277 /* LiveActivityTimelineSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityTimelineSchedule.swift; sourceTree = "<group>"; };
+		4CAF7BEB2AE5077C000C9277 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		4CAF7BED2AE50787000C9277 /* Teams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
+		4CAF7BEF2AE50794000C9277 /* Start.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start.swift; sourceTree = "<group>"; };
+		4CAF7BF12AE507A3000C9277 /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
+		4CAF7BF32AE507B6000C9277 /* WorkoutTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTabView.swift; sourceTree = "<group>"; };
+		4CAF7BF52AE507BF000C9277 /* Controls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controls.swift; sourceTree = "<group>"; };
+		4CAF7BF72AE507CC000C9277 /* LiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivity.swift; sourceTree = "<group>"; };
+		4CAF7BF92AE507D8000C9277 /* LiveScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveScore.swift; sourceTree = "<group>"; };
+		4CAF7BFB2AE507E5000C9277 /* Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
+		4CAF7BFD2AE507F0000C9277 /* ActivityRings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +101,7 @@
 		4CAF7BAD2AE5061E000C9277 = {
 			isa = PBXGroup;
 			children = (
+				4CAF7BD32AE506A8000C9277 /* Shared */,
 				4CAF7BBE2AE5061E000C9277 /* Padel Pro Watch App */,
 				4CAF7BB52AE5061E000C9277 /* Products */,
 			);
@@ -78,6 +119,10 @@
 		4CAF7BBE2AE5061E000C9277 /* Padel Pro Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				4CAF7BEA2AE50774000C9277 /* Home */,
+				4CAF7BE92AE5076F000C9277 /* Workout */,
+				4CAF7BD22AE50644000C9277 /* Padel-Pro-Watch-App-Info.plist */,
+				4CAF7BD12AE50642000C9277 /* Padel Pro Watch App.entitlements */,
 				4CAF7BBF2AE5061E000C9277 /* Padel_ProApp.swift */,
 				4CAF7BC12AE5061E000C9277 /* ContentView.swift */,
 				4CAF7BC32AE5061F000C9277 /* Assets.xcassets */,
@@ -92,6 +137,70 @@
 				4CAF7BC62AE5061F000C9277 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4CAF7BD32AE506A8000C9277 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				4CAF7BD62AE506B8000C9277 /* Views */,
+				4CAF7BD52AE506B4000C9277 /* Session */,
+				4CAF7BD42AE506B0000C9277 /* Workout */,
+				4CAF7BE52AE50749000C9277 /* LoggerExtension.swift */,
+				4CAF7BE72AE50759000C9277 /* LiveActivityTimelineSchedule.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		4CAF7BD42AE506B0000C9277 /* Workout */ = {
+			isa = PBXGroup;
+			children = (
+				4CAF7BDF2AE50716000C9277 /* WorkoutManager.swift */,
+				4CAF7BE12AE50727000C9277 /* WorkoutManager+watchOS.swift */,
+				4CAF7BE32AE50737000C9277 /* WorkoutManager+Statistics.swift */,
+			);
+			path = Workout;
+			sourceTree = "<group>";
+		};
+		4CAF7BD52AE506B4000C9277 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				4CAF7BDB2AE506F2000C9277 /* SessionData.swift */,
+				4CAF7BDD2AE50705000C9277 /* SessionManager.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		4CAF7BD62AE506B8000C9277 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4CAF7BD72AE506C5000C9277 /* ElapsedTimeView.swift */,
+				4CAF7BD92AE506DB000C9277 /* PulsingHeart.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4CAF7BE92AE5076F000C9277 /* Workout */ = {
+			isa = PBXGroup;
+			children = (
+				4CAF7BF32AE507B6000C9277 /* WorkoutTabView.swift */,
+				4CAF7BF52AE507BF000C9277 /* Controls.swift */,
+				4CAF7BF72AE507CC000C9277 /* LiveActivity.swift */,
+				4CAF7BF92AE507D8000C9277 /* LiveScore.swift */,
+				4CAF7BFB2AE507E5000C9277 /* Summary.swift */,
+				4CAF7BFD2AE507F0000C9277 /* ActivityRings.swift */,
+			);
+			path = Workout;
+			sourceTree = "<group>";
+		};
+		4CAF7BEA2AE50774000C9277 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4CAF7BEB2AE5077C000C9277 /* Home.swift */,
+				4CAF7BED2AE50787000C9277 /* Teams.swift */,
+				4CAF7BEF2AE50794000C9277 /* Start.swift */,
+				4CAF7BF12AE507A3000C9277 /* Bubble.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +302,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CAF7BC22AE5061E000C9277 /* ContentView.swift in Sources */,
+				4CAF7BF22AE507A3000C9277 /* Bubble.swift in Sources */,
+				4CAF7BE62AE50749000C9277 /* LoggerExtension.swift in Sources */,
+				4CAF7BF02AE50794000C9277 /* Start.swift in Sources */,
+				4CAF7BF82AE507CC000C9277 /* LiveActivity.swift in Sources */,
+				4CAF7BE82AE50759000C9277 /* LiveActivityTimelineSchedule.swift in Sources */,
+				4CAF7BFE2AE507F0000C9277 /* ActivityRings.swift in Sources */,
+				4CAF7BFC2AE507E5000C9277 /* Summary.swift in Sources */,
+				4CAF7BE22AE50727000C9277 /* WorkoutManager+watchOS.swift in Sources */,
+				4CAF7BE02AE50716000C9277 /* WorkoutManager.swift in Sources */,
+				4CAF7BDC2AE506F2000C9277 /* SessionData.swift in Sources */,
+				4CAF7BFA2AE507D8000C9277 /* LiveScore.swift in Sources */,
+				4CAF7BDE2AE50705000C9277 /* SessionManager.swift in Sources */,
+				4CAF7BEE2AE50787000C9277 /* Teams.swift in Sources */,
+				4CAF7BD82AE506C5000C9277 /* ElapsedTimeView.swift in Sources */,
+				4CAF7BE42AE50737000C9277 /* WorkoutManager+Statistics.swift in Sources */,
+				4CAF7BF42AE507B6000C9277 /* WorkoutTabView.swift in Sources */,
 				4CAF7BC02AE5061E000C9277 /* Padel_ProApp.swift in Sources */,
+				4CAF7BEC2AE5077C000C9277 /* Home.swift in Sources */,
+				4CAF7BF62AE507BF000C9277 /* Controls.swift in Sources */,
+				4CAF7BDA2AE506DB000C9277 /* PulsingHeart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,13 +455,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Padel Pro Watch App/Padel Pro Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Padel Pro Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = T2HL3ZXJQU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Padel-Pro-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Padel Pro";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your workout related data will be used to display statistics during active sessions in Padel Pro.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Workouts tracked by Vibora on Apple Watch will be saved to HealthKit.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -357,13 +489,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Padel Pro Watch App/Padel Pro Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Padel Pro Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = T2HL3ZXJQU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Padel-Pro-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Padel Pro";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your workout related data will be used to display statistics during active sessions in Padel Pro.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Workouts tracked by Vibora on Apple Watch will be saved to HealthKit.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (

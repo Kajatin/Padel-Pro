@@ -1,18 +1,19 @@
 //
-//  Padel_ProApp.swift
-//  Padel Pro Watch App
+//  PadelApp.swift
+//  Padel Watch App
 //
-//  Created by Roland Kajatin on 22/10/2023.
+//  Created by Roland Kajatin on 08/10/2023.
 //
 
 import SwiftUI
 
 @main
-struct Padel_Pro_Watch_AppApp: App {
+struct Padel_Watch_AppApp: App {
+    @WKApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     private let sessionManager = SessionManager()
     private let workoutManager = WorkoutManager.shared
     
-    var body: some Scene {
+    @SceneBuilder var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(sessionManager)

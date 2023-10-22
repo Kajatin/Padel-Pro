@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  Padel Pro Watch App
+//  Padel Watch App
 //
-//  Created by Roland Kajatin on 22/10/2023.
+//  Created by Roland Kajatin on 08/10/2023.
 //
 
 import SwiftUI
