@@ -10,8 +10,8 @@ import OSLog
 extension Logger {
     private static let appIdentifier = Bundle.main.bundleIdentifier!
 #if os(watchOS)
-    static let shared = Logger(subsystem: appIdentifier, category: "ViboraWatch")
+    static let shared = Logger(subsystem: appIdentifier, category: "PadelProWatch")
 #else
-    static let shared = Logger(subsystem: appIdentifier, category: "Vibora")
+    static let shared = Logger(subsystem: appIdentifier, category: "PadelPro")
 #endif
 }

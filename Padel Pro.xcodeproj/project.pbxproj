@@ -465,14 +465,14 @@
 				INFOPLIST_FILE = "Padel-Pro-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Padel Pro";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your workout related data will be used to display statistics during active sessions in Padel Pro.";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Workouts tracked by Vibora on Apple Watch will be saved to HealthKit.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Workouts tracked by Padel Pro on Apple Watch will be saved to HealthKit.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.kajatin.roland.Padel-Pro.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -499,14 +499,14 @@
 				INFOPLIST_FILE = "Padel-Pro-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Padel Pro";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your workout related data will be used to display statistics during active sessions in Padel Pro.";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Workouts tracked by Vibora on Apple Watch will be saved to HealthKit.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Workouts tracked by Padel Pro on Apple Watch will be saved to HealthKit.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.kajatin.roland.Padel-Pro.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -527,7 +527,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T2HL3ZXJQU;
 				INFOPLIST_KEY_CFBundleDisplayName = "Padel Pro";
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.kajatin.roland.Padel-Pro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -543,7 +543,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T2HL3ZXJQU;
 				INFOPLIST_KEY_CFBundleDisplayName = "Padel Pro";
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.kajatin.roland.Padel-Pro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
