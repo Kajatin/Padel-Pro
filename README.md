@@ -10,6 +10,12 @@ Padel Pro adds the missing workout for Padel on Apple Watch. It tracks vitals du
   <img width="240" src="https://github.com/Kajatin/Padel-Pro/assets/33018844/5d748757-76ef-463c-9631-316b4d798f31">
 </p>
 
+## Apple Watch widget extension
+
+<p align="center">
+  <img width="240" src="https://github.com/Kajatin/Padel-Pro/assets/33018844/20334692-6d87-4ec6-8529-c4315d2f0f6d">
+</p>
+
 ## TODOs
 
 - [ ] Support 2 player games
@@ -18,3 +24,4 @@ Padel Pro adds the missing workout for Padel on Apple Watch. It tracks vitals du
 - [ ] Implement iOS companion
 - [ ] Add weather information if activity is outside
 - [ ] Fix matchedGeometryEffect
+- [x] Add widget extension
