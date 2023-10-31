@@ -5,15 +5,15 @@ Padel Pro adds the missing workout for Padel on Apple Watch. It tracks vitals du
 ## Apple Watch interface
 
 <p align="center">
-  <img width="240" src="https://github.com/Kajatin/Padel-Pro/assets/33018844/f027ca69-f26a-40a2-ab7b-711dc8aab9e1">
-  <img width="240" src="https://github.com/Kajatin/Padel-Pro/assets/33018844/b4994a94-e78e-46f2-8af0-b9d890e56353">
-  <img width="240" src="https://github.com/Kajatin/Padel-Pro/assets/33018844/5d748757-76ef-463c-9631-316b4d798f31">
+  <img width="240" src="https://github.com/Kajatin/Padel-Pro/assets/33018844/1460fdfe-e8ab-499e-92ae-5e041743afb3">
+  <img width="240" src="https://github.com/Kajatin/Padel-Pro/assets/33018844/5392370b-aa0d-4a99-a40c-26565fca4ce4">
+  <img width="240" src="https://github.com/Kajatin/Padel-Pro/assets/33018844/f24fd557-d98a-42bf-b8d7-770fa473d96e">
 </p>
 
 ## Apple Watch widget extension
 
 <p align="center">
-  <img width="240" src="https://github.com/Kajatin/Padel-Pro/assets/33018844/20334692-6d87-4ec6-8529-c4315d2f0f6d">
+  <img width="240" src="https://github.com/Kajatin/Padel-Pro/assets/33018844/3ce10492-ef1f-457f-8ded-4d13cc71dcc4">
 </p>
 
 ## TODOs
