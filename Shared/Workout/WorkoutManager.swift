@@ -25,7 +25,6 @@ class WorkoutManager: NSObject, ObservableObject {
     }
     
     /// Workout session live states that the UI observes
-    @Published var indoors: Location = .indoors
     @Published var sessionState: HKWorkoutSessionState = .notStarted
     @Published var heartRate: Double = 0
     @Published var activeEnergy: Double = 0
@@ -130,7 +129,6 @@ extension WorkoutManager {
     func reset() {
         Logger.shared.debug("Resetting workout state")
         
-        indoors = .indoors
         sessionState = .notStarted
         showSummary = false
         
@@ -185,24 +183,6 @@ extension WorkoutManager: HKWorkoutSessionDelegate {
     nonisolated func workoutSession(_ workoutSession: HKWorkoutSession,
                                     didFailWithError error: Error) {
         Logger.shared.error("Session has failed with an error: \(String(describing: error))")
-    }
-}
-
-extension WorkoutManager {
-    enum Location: CaseIterable, Identifiable {
-        case indoors
-        case outdoors
-        
-        var id: Location { self }
-        
-        var description: String {
-            switch self {
-            case .indoors:
-                return "Indoors"
-            case .outdoors:
-                return "Outdoors"
-            }
-        }
     }
 }
 

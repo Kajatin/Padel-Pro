@@ -25,7 +25,6 @@ struct Home: View {
 
 enum HomeAppScreen: Codable, Hashable, Identifiable, CaseIterable {
     case start
-    case teams
     
     var id: HomeAppScreen { self }
 }
@@ -36,8 +35,6 @@ extension HomeAppScreen {
         switch self {
         case .start:
             Start()
-        case .teams:
-            Teams()
         }
     }
 }

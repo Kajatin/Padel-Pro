@@ -22,7 +22,6 @@
 		4CAF7BE62AE50749000C9277 /* LoggerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF7BE52AE50749000C9277 /* LoggerExtension.swift */; };
 		4CAF7BE82AE50759000C9277 /* LiveActivityTimelineSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF7BE72AE50759000C9277 /* LiveActivityTimelineSchedule.swift */; };
 		4CAF7BEC2AE5077C000C9277 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF7BEB2AE5077C000C9277 /* Home.swift */; };
-		4CAF7BEE2AE50787000C9277 /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF7BED2AE50787000C9277 /* Teams.swift */; };
 		4CAF7BF02AE50794000C9277 /* Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF7BEF2AE50794000C9277 /* Start.swift */; };
 		4CAF7BF22AE507A3000C9277 /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF7BF12AE507A3000C9277 /* Bubble.swift */; };
 		4CAF7BF42AE507B6000C9277 /* WorkoutTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF7BF32AE507B6000C9277 /* WorkoutTabView.swift */; };
@@ -100,7 +99,6 @@
 		4CAF7BE52AE50749000C9277 /* LoggerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerExtension.swift; sourceTree = "<group>"; };
 		4CAF7BE72AE50759000C9277 /* LiveActivityTimelineSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityTimelineSchedule.swift; sourceTree = "<group>"; };
 		4CAF7BEB2AE5077C000C9277 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		4CAF7BED2AE50787000C9277 /* Teams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
 		4CAF7BEF2AE50794000C9277 /* Start.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start.swift; sourceTree = "<group>"; };
 		4CAF7BF12AE507A3000C9277 /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
 		4CAF7BF32AE507B6000C9277 /* WorkoutTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTabView.swift; sourceTree = "<group>"; };
@@ -238,7 +236,6 @@
 			isa = PBXGroup;
 			children = (
 				4CAF7BEB2AE5077C000C9277 /* Home.swift */,
-				4CAF7BED2AE50787000C9277 /* Teams.swift */,
 				4CAF7BEF2AE50794000C9277 /* Start.swift */,
 				4CAF7BF12AE507A3000C9277 /* Bubble.swift */,
 			);
@@ -328,7 +325,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					4CAF7BB32AE5061E000C9277 = {
 						CreatedOnToolsVersion = 15.0.1;
@@ -406,7 +403,6 @@
 				4CAF7BDC2AE506F2000C9277 /* SessionData.swift in Sources */,
 				4CAF7BFA2AE507D8000C9277 /* LiveScore.swift in Sources */,
 				4CAF7BDE2AE50705000C9277 /* SessionManager.swift in Sources */,
-				4CAF7BEE2AE50787000C9277 /* Teams.swift in Sources */,
 				4CAF7BD82AE506C5000C9277 /* ElapsedTimeView.swift in Sources */,
 				4CAF7BE42AE50737000C9277 /* WorkoutManager+Statistics.swift in Sources */,
 				4CAF7BF42AE507B6000C9277 /* WorkoutTabView.swift in Sources */,
@@ -476,6 +472,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -537,6 +534,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -579,7 +577,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.kajatin.roland.Padel-Pro.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -614,7 +612,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.kajatin.roland.Padel-Pro.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -635,7 +633,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T2HL3ZXJQU;
 				INFOPLIST_KEY_CFBundleDisplayName = "Padel Pro";
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.kajatin.roland.Padel-Pro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -651,7 +649,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T2HL3ZXJQU;
 				INFOPLIST_KEY_CFBundleDisplayName = "Padel Pro";
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.kajatin.roland.Padel-Pro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;

@@ -130,7 +130,13 @@ struct Team {
     
     var slug: String {
         get {
-            return players.map { $0.slug }.joined(separator: "/").uppercased()
+//            return players.map { $0.slug }.joined(separator: "/").uppercased()
+            switch designation {
+            case .A:
+                "A"
+            case .B:
+                "B"
+            }
         }
     }
     

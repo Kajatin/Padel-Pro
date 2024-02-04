@@ -54,8 +54,8 @@ struct Watch_Widgets: Widget {
             Watch_WidgetsEntryView(entry: entry)
                 .containerBackground(.fill.tertiary, for: .widget)
         }
-        .configurationDisplayName("Padel Pro Widget")
-        .description("Padel Pro shortcut to start a session quickly.")
+        .configurationDisplayName("Padel Pro")
+        .description("Start a session quickly.")
         .supportedFamilies([.accessoryCircular, .accessoryCorner])
     }
 }

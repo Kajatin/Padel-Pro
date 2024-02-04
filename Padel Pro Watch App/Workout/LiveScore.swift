@@ -8,9 +8,6 @@
 import SwiftUI
 
 struct LiveScore: View {
-    @State private var homeScore: Int = 0
-    @State private var awayScore: Int = 0
-    
     @EnvironmentObject var sessionManager: SessionManager
     
     var body: some View {
@@ -29,7 +26,7 @@ struct LiveScore: View {
                         Button {
                             sessionManager.scoreTeam(designation: .A)
                         } label: {
-                            Image(systemName: "plus.square.fill")
+                            Image(systemName: "a.square.fill")
                         }
                     }
                     
@@ -123,7 +120,7 @@ struct SetScore: View {
     var body: some View {
         Grid(alignment: .leadingFirstTextBaseline) {
             GridRow {
-                Text(sessionManager.sessionData.teamA?.slug ?? "??/??")
+                Text(sessionManager.sessionData.teamA?.slug ?? "A")
                     .frame(minWidth: 35)
                     .padding([.horizontal], 3)
                     .overlay(topBorder.stroke(.secondary))
@@ -145,7 +142,7 @@ struct SetScore: View {
             }
             
             GridRow {
-                Text(sessionManager.sessionData.teamB?.slug ?? "??/??")
+                Text(sessionManager.sessionData.teamB?.slug ?? "B")
                     .frame(minWidth: 35)
                     .padding([.horizontal], 3)
                     .overlay(bottomBorder.stroke(.secondary))
