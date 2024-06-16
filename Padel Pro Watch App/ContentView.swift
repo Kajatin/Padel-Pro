@@ -20,9 +20,8 @@ struct ContentView: View {
 }
 
 #Preview {
-    let sessionManager = SessionManager()
     let workoutManager = WorkoutManager.shared
     return ContentView()
-        .environmentObject(sessionManager)
+        .environment(SessionManager())
         .environmentObject(workoutManager)
 }

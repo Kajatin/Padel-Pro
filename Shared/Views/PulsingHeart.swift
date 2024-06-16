@@ -27,7 +27,7 @@ struct PulsingHeart: View {
             .frame(width: width, height: height)
             .foregroundColor(.red)
             .scaleEffect(animating ? 1.15 : 1)
-            .shadow(color: .red.opacity(0.7), radius: 10)
+            .shadow(color: .red.opacity(0.7), radius: 2)
             .animation(Animation.timingCurve(.circularEaseOut, duration: animationDuration).repeatForever(autoreverses: true), value: animating)
             .onAppear {
                 DispatchQueue.main.async {

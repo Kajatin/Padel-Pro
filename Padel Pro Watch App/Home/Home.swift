@@ -40,9 +40,7 @@ extension HomeAppScreen {
 }
 
 #Preview {
-    let sessionManager = SessionManager()
     let workoutManager = WorkoutManager.shared
     return Home()
-        .environmentObject(sessionManager)
         .environmentObject(workoutManager)
 }

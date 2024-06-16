@@ -9,7 +9,7 @@ import SwiftUI
 import HealthKit
 
 struct Summary: View {
-    @EnvironmentObject var sessionManager: SessionManager
+    @Environment(SessionManager.self) var sessionManager
     @EnvironmentObject var workoutManager: WorkoutManager
     
     var body: some View {
@@ -141,9 +141,8 @@ struct Rings: View {
 }
 
 #Preview {
-    let sessionManager = SessionManager()
     let workoutManager = WorkoutManager.shared
     return Summary()
-        .environmentObject(sessionManager)
+        .environment(SessionManager())
         .environmentObject(workoutManager)
 }

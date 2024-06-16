@@ -11,7 +11,7 @@ import HealthKit
 
 struct Start: View {
     @Namespace private var animation
-    @EnvironmentObject var sessionManager: SessionManager
+    @Environment(SessionManager.self) var sessionManager
     @EnvironmentObject var workoutManager: WorkoutManager
     
     var body: some View {
@@ -39,7 +39,7 @@ struct Start: View {
     private func startWorkout() {
         Task {
             do {
-                sessionManager.createTeams()
+                sessionManager.reset()
                 let configuration = HKWorkoutConfiguration()
                 configuration.activityType = .tennis
                 Logger.shared.debug("Creating session with configuration: \(String(describing: configuration))")
@@ -54,9 +54,7 @@ struct Start: View {
 }
 
 #Preview {
-    let sessionManager = SessionManager()
     let workoutManager = WorkoutManager.shared
     return Start()
-        .environmentObject(sessionManager)
         .environmentObject(workoutManager)
 }

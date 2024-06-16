@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct Controls: View {
     @State private var showEndSheet = false
     
-    @EnvironmentObject var sessionManager: SessionManager
+    @Environment(SessionManager.self) var sessionManager
     @EnvironmentObject var workoutManager: WorkoutManager
     
     var body: some View {
@@ -25,6 +26,7 @@ struct Controls: View {
                     .tint(.red)
                     .font(.title2)
                     Text("End")
+                        .monospaced()
                 }
                 
                 VStack {
@@ -33,25 +35,35 @@ struct Controls: View {
                     } label: {
                         Image(systemName: workoutManager.sessionState == .running ? "pause" : "arrow.clockwise")
                     }
-                    .tint(.yellow)
+                    .tint(.offGray)
                     .font(.title2)
                     
                     Text(workoutManager.sessionState == .running ? "Pause" : "Resume")
+                        .monospaced()
                 }
             }
             .sheet(isPresented: $showEndSheet) {
                 VStack {
                     Text("Are you sure?")
-                    Button("End Workout", role: .destructive) {
+                        .monospaced()
+                    Button(role: .destructive) {
                         sessionManager.reset()
                         workoutManager.session?.stopActivity(with: .now)
                         showEndSheet = false
+                    } label: {
+                        Text("End Workout")
+                            .monospaced()
                     }
                 }
+                .foregroundStyle(.offWhite)
             }
+            .scenePadding()
+            .foregroundStyle(.offBlack)
+            .containerBackground(.offWhite, for: .navigation)
             .navigationTitle {
                 Text(workoutManager.sessionState == .paused ? "Paused" : "Padel")
-                    .foregroundStyle(Color.accentColor)
+                    .foregroundStyle(.offBlack)
+                    .monospaced()
             }
             .navigationBarTitleDisplayMode(.inline)
         }
@@ -59,9 +71,8 @@ struct Controls: View {
 }
 
 #Preview {
-    let sessionManager = SessionManager()
     let workoutManager = WorkoutManager.shared
     return Controls()
-        .environmentObject(sessionManager)
+        .environment(SessionManager())
         .environmentObject(workoutManager)
 }
