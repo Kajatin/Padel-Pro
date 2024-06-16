@@ -10,10 +10,10 @@ import UIKit
 
 struct Controls: View {
     @State private var showEndSheet = false
-    
+
     @Environment(SessionManager.self) var sessionManager
     @EnvironmentObject var workoutManager: WorkoutManager
-    
+
     var body: some View {
         NavigationStack {
             HStack {
@@ -28,7 +28,7 @@ struct Controls: View {
                     Text("End")
                         .monospaced()
                 }
-                
+
                 VStack {
                     Button {
                         workoutManager.sessionState == .running ? workoutManager.session?.pause() : workoutManager.session?.resume()
@@ -37,7 +37,7 @@ struct Controls: View {
                     }
                     .tint(.offGray)
                     .font(.title2)
-                    
+
                     Text(workoutManager.sessionState == .running ? "Pause" : "Resume")
                         .monospaced()
                 }
@@ -58,11 +58,11 @@ struct Controls: View {
                 .foregroundStyle(.offWhite)
             }
             .scenePadding()
-            .foregroundStyle(.offBlack)
-            .containerBackground(.offWhite, for: .navigation)
+            .foregroundStyle(.offWhite)
+            .containerBackground(.offBlack, for: .navigation)
             .navigationTitle {
                 Text(workoutManager.sessionState == .paused ? "Paused" : "Padel")
-                    .foregroundStyle(.offBlack)
+                    .foregroundStyle(.offWhite)
                     .monospaced()
             }
             .navigationBarTitleDisplayMode(.inline)

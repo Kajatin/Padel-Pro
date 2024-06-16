@@ -10,55 +10,55 @@ import SwiftUI
 
 struct ScorePill: View {
     @Environment(SessionManager.self) var sessionManager
-    
+
     private let baseWidth: CGFloat = WKInterfaceDevice.current().screenBounds.width < 190 ? 42 : 50
     private let baseHeight: CGFloat = WKInterfaceDevice.current().screenBounds.width < 190 ? 24 : 26
     private let maxCrownRotation: Double = 300
-    
+
     @State private var rotationValue: Double = 0
     @State private var rotationBasedWidth: CGFloat = WKInterfaceDevice.current().screenBounds.width < 190 ? 42 : 50
     @State private var rotationBasedHeight: CGFloat = WKInterfaceDevice.current().screenBounds.width < 190 ? 24 : 26
     @State private var rotationBasedWidthAway: CGFloat = WKInterfaceDevice.current().screenBounds.width < 190 ? 42 : 50
     @State private var rotationBasedHeightAway: CGFloat = WKInterfaceDevice.current().screenBounds.width < 190 ? 24 : 26
     @State private var crownDisabled: Bool = false
-    
+
     private let scoreSize: CGFloat = WKInterfaceDevice.current().screenBounds.width < 190 ? 18 : 20
-    
+
     var body: some View {
         ZStack {
             Color.offGray
                 .frame(width: baseWidth, height: baseHeight)
-            
+
             HStack(spacing: 0) {
                 ZStack {
                     Capsule()
                         .frame(width: rotationBasedWidthAway, height: rotationBasedHeightAway)
                         .animation(.spring, value: rotationValue)
                         .foregroundStyle(.offGray)
-                    
+
                     let currentSet = sessionManager.match.currentSet()
                     if let tieBreaker = currentSet.tieBreaker {
                         Text("\(tieBreaker.points.teamAway)")
-                            .foregroundStyle(.offWhite)
+                            .foregroundStyle(.offBlack)
                     } else {
                         Text("\(currentSet.currentGame().points.teamAway.rawValue)")
-                            .foregroundStyle(.offWhite)
+                            .foregroundStyle(.offBlack)
                     }
                 }
-                
+
                 ZStack {
                     Capsule()
                         .frame(width: rotationBasedWidth, height: rotationBasedHeight)
                         .animation(.spring, value: rotationValue)
-                        .foregroundStyle(.offBlack)
-                    
+                        .foregroundStyle(.offWhite)
+
                     let currentSet = sessionManager.match.currentSet()
                     if let tieBreaker = currentSet.tieBreaker {
                         Text("\(tieBreaker.points.teamHome)")
-                            .foregroundStyle(.offWhite)
+                            .foregroundStyle(.offBlack)
                     } else {
                         Text("\(currentSet.currentGame().points.teamHome.rawValue)")
-                            .foregroundStyle(.offWhite)
+                            .foregroundStyle(.offBlack)
                     }
                 }
             }
@@ -69,7 +69,7 @@ struct ScorePill: View {
             if crownDisabled {
                 return
             }
-            
+
             if event.offset > 0 {
                 rotationBasedWidthAway = nonLinearWidth(for: rotationValue)
                 rotationBasedHeightAway = nonLinearHeight(for: rotationValue)
@@ -77,7 +77,7 @@ struct ScorePill: View {
                 rotationBasedWidth = nonLinearWidth(for: rotationValue)
                 rotationBasedHeight = nonLinearHeight(for: rotationValue)
             }
-            
+
             if event.offset >= (0.9 * maxCrownRotation) || event.offset <= -(0.9 * maxCrownRotation) {
                 withAnimation {
                     rotationValue = 0
@@ -87,16 +87,17 @@ struct ScorePill: View {
                     rotationBasedHeightAway = baseHeight
                     crownDisabled = true
                     
-                    if event.offset > 0 {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            sessionManager.score(for: .away)
-                        }
-                    } else {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            sessionManager.score(for: .home)
+                    let teamToScore = event.offset > 0 ? Team.away : Team.home
+                    let matchOver = sessionManager.match.winner() != nil
+
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        if matchOver {
+                            sessionManager.reset()
+                        } else {
+                            sessionManager.score(for: teamToScore)
                         }
                     }
-                    
+
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                         crownDisabled = false
                     }
@@ -115,13 +116,13 @@ struct ScorePill: View {
             }
         })
     }
-    
+
     private func nonLinearWidth(for value: Double) -> CGFloat {
         let relativeValue = abs(value) / maxCrownRotation
         let scaledValue = pow(relativeValue, 2)
         return baseWidth * (1 + 0.5 * scaledValue)
     }
-    
+
     private func nonLinearHeight(for value: Double) -> CGFloat {
         return baseHeight
 //        let relativeValue = abs(value) / maxCrownRotation
