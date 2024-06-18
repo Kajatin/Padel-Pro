@@ -15,24 +15,21 @@ struct Start: View {
     @EnvironmentObject var workoutManager: WorkoutManager
     
     var body: some View {
-        NavigationStack {
-            VStack(alignment: .center) {
-                Button {
-                    startWorkout()
-                } label: {
-                    ZStack {
-                        BubbleStack()
-                            .matchedGeometryEffect(id: "BubbleStack", in: animation)
-                        Text("Start")
-                            .font(.system(.title2, design: .rounded))
-                            .fontWeight(.medium)
-                            .foregroundStyle(Color.accentColor)
-                    }
+        VStack(alignment: .center) {
+            Button {
+                startWorkout()
+            } label: {
+                ZStack {
+                    BubbleStack()
+                        .matchedGeometryEffect(id: "BubbleStack", in: animation)
+                    Text("Start")
+                        .font(.system(.title2, design: .rounded))
+                        .fontWeight(.medium)
+                        .foregroundStyle(Color.accentColor)
                 }
-                .buttonStyle(.plain)
-                .scenePadding()
             }
-            .ignoresSafeArea(edges: .bottom)
+            .buttonStyle(.plain)
+            .scenePadding()
         }
     }
     
@@ -56,5 +53,6 @@ struct Start: View {
 #Preview {
     let workoutManager = WorkoutManager.shared
     return Start()
+        .environment(SessionManager())
         .environmentObject(workoutManager)
 }

@@ -31,11 +31,12 @@ struct LiveActivity: View {
     struct Scores: View {
         let scoreSize: CGFloat = WKInterfaceDevice.current().screenBounds.width < 190 ? 18 : 20
         let winSize: CGFloat = WKInterfaceDevice.current().screenBounds.width < 190 ? 14 : 16
+        let bubbleWH: CGFloat = WKInterfaceDevice.current().screenBounds.width < 190 ? 6 : 8
         
         @State private var rotationValue: Double = 0
-
+        
         @Environment(SessionManager.self) var sessionManager
-
+        
         var body: some View {
             if let winner = sessionManager.match.winner() {
                 ZStack {
@@ -74,12 +75,12 @@ struct LiveActivity: View {
                             let scoreMissing = setsToWin - score
                             ForEach(0..<score, id: \.self) { _ in
                                 Circle()
-                                    .frame(width: 8)
+                                    .frame(width: bubbleWH)
                                     .foregroundStyle(.offWhite)
                             }
                             ForEach(0..<scoreMissing, id: \.self) { _ in
                                 Circle()
-                                    .frame(width: 8)
+                                    .frame(width: bubbleWH)
                                     .foregroundStyle(.offGray)
                             }
                         }
@@ -90,12 +91,12 @@ struct LiveActivity: View {
                             let scoreMissing = setsToWin - score
                             ForEach(0..<score, id: \.self) { _ in
                                 Circle()
-                                    .frame(width: 8)
+                                    .frame(width: bubbleWH)
                                     .foregroundStyle(.offWhite)
                             }
                             ForEach(0..<scoreMissing, id: \.self) { _ in
                                 Circle()
-                                    .frame(width: 8)
+                                    .frame(width: bubbleWH)
                                     .foregroundStyle(.offGray)
                             }
                         }

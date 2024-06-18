@@ -40,23 +40,47 @@
 
 import Foundation
 
-enum MatchType {
+enum MatchType: String, CaseIterable, Identifiable {
     case regular
     case tieBreak
+    
+    var id: Self {
+        return self
+    }
+    
+    static func readFromUserDefaults() -> MatchType? {
+        if let rawValue = UserDefaults.standard.string(forKey: "MatchType") {
+            return MatchType(rawValue: rawValue)
+        }
+        return nil
+    }
+    
+    func saveToUserDefaults() {
+        UserDefaults.standard.set(self.rawValue, forKey: "MatchType")
+    }
 }
 
 struct Match {
     var sets: [PadelSet]
-    var matchType: MatchType = .regular
+    var matchType: MatchType
     
     init() {
         self.sets = [PadelSet(tieBreaker: nil)]
-        // TODO: read from userdefaults
-        self.matchType = .regular
+        self.matchType = MatchType.readFromUserDefaults() ?? .regular
     }
     
     func currentSet() -> PadelSet {
         return sets.last!
+    }
+
+    func scores() -> (teamAway: Int, teamHome: Int) {
+        let scoreAway = sets.reduce(0, { score, set in
+            return score + (set.winner() == .away ? 1 : 0)
+        })
+        let scoreHome = sets.reduce(0, { score, set in
+            return score + (set.winner() == .home ? 1 : 0)
+        })
+        return (scoreAway, scoreHome)
     }
     
     func winner() -> Team? {

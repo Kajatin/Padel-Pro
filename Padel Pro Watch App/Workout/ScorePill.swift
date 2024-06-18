@@ -10,6 +10,8 @@ import SwiftUI
 
 struct ScorePill: View {
     @Environment(SessionManager.self) var sessionManager
+    
+    var winner: Team? = nil
 
     private let baseWidth: CGFloat = WKInterfaceDevice.current().screenBounds.width < 190 ? 42 : 50
     private let baseHeight: CGFloat = WKInterfaceDevice.current().screenBounds.width < 190 ? 24 : 26
@@ -36,13 +38,19 @@ struct ScorePill: View {
                         .animation(.spring, value: rotationValue)
                         .foregroundStyle(.offGray)
 
-                    let currentSet = sessionManager.match.currentSet()
-                    if let tieBreaker = currentSet.tieBreaker {
-                        Text("\(tieBreaker.points.teamAway)")
-                            .foregroundStyle(.offBlack)
+                    if winner == .away {
+                        Image(systemName: "crown")
+                    } else if winner == nil {
+                        let currentSet = sessionManager.match.currentSet()
+                        if let tieBreaker = currentSet.tieBreaker {
+                            Text("\(tieBreaker.points.teamAway)")
+                                .foregroundStyle(.offBlack)
+                        } else {
+                            Text("\(currentSet.currentGame().points.teamAway.rawValue)")
+                                .foregroundStyle(.offBlack)
+                        }
                     } else {
-                        Text("\(currentSet.currentGame().points.teamAway.rawValue)")
-                            .foregroundStyle(.offBlack)
+                        Image(systemName: "xmark")
                     }
                 }
 
@@ -51,13 +59,22 @@ struct ScorePill: View {
                         .frame(width: rotationBasedWidth, height: rotationBasedHeight)
                         .animation(.spring, value: rotationValue)
                         .foregroundStyle(.offWhite)
-
-                    let currentSet = sessionManager.match.currentSet()
-                    if let tieBreaker = currentSet.tieBreaker {
-                        Text("\(tieBreaker.points.teamHome)")
+                    
+                    
+                    if winner == .home {
+                        Image(systemName: "crown")
                             .foregroundStyle(.offBlack)
+                    } else if winner == nil {
+                        let currentSet = sessionManager.match.currentSet()
+                        if let tieBreaker = currentSet.tieBreaker {
+                            Text("\(tieBreaker.points.teamHome)")
+                                .foregroundStyle(.offBlack)
+                        } else {
+                            Text("\(currentSet.currentGame().points.teamHome.rawValue)")
+                                .foregroundStyle(.offBlack)
+                        }
                     } else {
-                        Text("\(currentSet.currentGame().points.teamHome.rawValue)")
+                        Image(systemName: "xmark")
                             .foregroundStyle(.offBlack)
                     }
                 }
@@ -132,6 +149,6 @@ struct ScorePill: View {
 }
 
 #Preview {
-    ScorePill()
+    ScorePill(winner: .home)
         .environment(SessionManager())
 }
