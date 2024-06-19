@@ -13,6 +13,8 @@ struct Settings: View {
     @State private var matchType: MatchType = .readFromUserDefaults() ?? .regular
     
     @State private var showResetConfirmation = false
+    
+    @AppStorage("isOnboarding") var isOnboarding: Bool?
 
     var body: some View {
         NavigationStack {
@@ -47,6 +49,9 @@ struct Settings: View {
                 }
                 
                 Section {
+                    Button("Reset Tutorial") {
+                        isOnboarding = true
+                    }
                     Button("Reset to Defaults", role: .destructive) {
                         showResetConfirmation = true
                     }

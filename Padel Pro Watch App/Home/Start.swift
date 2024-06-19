@@ -23,7 +23,7 @@ struct Start: View {
                     BubbleStack()
                         .matchedGeometryEffect(id: "BubbleStack", in: animation)
                     Text("Start")
-                        .font(.system(.title2, design: .rounded))
+                        .font(.system(size: 26, weight: .black, design: .monospaced))
                         .fontWeight(.medium)
                         .foregroundStyle(Color.accentColor)
                 }

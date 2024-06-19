@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C3319512C22AB61009265FD /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3319502C22AB61009265FD /* Onboarding.swift */; };
 		4C9C6B0E2C2005A80029DE94 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9C6B0D2C2005A80029DE94 /* Settings.swift */; };
 		4CA1A4542C1DD93A005F8A33 /* ScorePill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA1A4532C1DD93A005F8A33 /* ScorePill.swift */; };
 		4CA1A4562C1EF971005F8A33 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA1A4552C1EF971005F8A33 /* Game.swift */; };
@@ -85,6 +86,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4C3319502C22AB61009265FD /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		4C9C6B0D2C2005A80029DE94 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		4CA1A4532C1DD93A005F8A33 /* ScorePill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorePill.swift; sourceTree = "<group>"; };
 		4CA1A4552C1EF971005F8A33 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
@@ -143,6 +145,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C33194F2C22AB58009265FD /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				4C3319502C22AB61009265FD /* Onboarding.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		4CAF7BAD2AE5061E000C9277 = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +177,7 @@
 		4CAF7BBE2AE5061E000C9277 /* Padel Pro Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				4C33194F2C22AB58009265FD /* Onboarding */,
 				4CAF7BEA2AE50774000C9277 /* Home */,
 				4CAF7BE92AE5076F000C9277 /* Workout */,
 				4CAF7BD22AE50644000C9277 /* Padel-Pro-Watch-App-Info.plist */,
@@ -424,6 +435,7 @@
 				4CA1A45A2C1F27C6005F8A33 /* PadelSet.swift in Sources */,
 				4CAF7BC02AE5061E000C9277 /* Padel_ProApp.swift in Sources */,
 				4CAF7BEC2AE5077C000C9277 /* Home.swift in Sources */,
+				4C3319512C22AB61009265FD /* Onboarding.swift in Sources */,
 				4CAF7BF62AE507BF000C9277 /* Controls.swift in Sources */,
 				4CAF7BDA2AE506DB000C9277 /* PulsingHeart.swift in Sources */,
 			);
