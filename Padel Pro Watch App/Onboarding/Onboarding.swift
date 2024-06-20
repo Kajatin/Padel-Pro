@@ -46,7 +46,9 @@ struct Welcome: View {
                 Spacer(minLength: 0)
                 
                 Button {
-                    tab = .scoreintro
+                    withAnimation {
+                        tab = .scoreintro
+                    }
                 } label: {
                     Text("Continue")
                 }
@@ -90,7 +92,9 @@ struct ScoreIntro: View {
                         Spacer()
                         
                         Button {
-                            isOnboarding = false
+                            withAnimation {
+                                isOnboarding = false
+                            }
                         } label: {
                             Text("Let's Go!")
                         }
