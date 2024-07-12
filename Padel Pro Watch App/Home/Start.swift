@@ -11,35 +11,32 @@ import HealthKit
 
 struct Start: View {
     @Namespace private var animation
-    @EnvironmentObject var sessionManager: SessionManager
+    @Environment(SessionManager.self) var sessionManager
     @EnvironmentObject var workoutManager: WorkoutManager
     
     var body: some View {
-        NavigationStack {
-            VStack(alignment: .center) {
-                Button {
-                    startWorkout()
-                } label: {
-                    ZStack {
-                        BubbleStack()
-                            .matchedGeometryEffect(id: "BubbleStack", in: animation)
-                        Text("Start")
-                            .font(.system(.title2, design: .rounded))
-                            .fontWeight(.medium)
-                            .foregroundStyle(Color.accentColor)
-                    }
+        VStack(alignment: .center) {
+            Button {
+                startWorkout()
+            } label: {
+                ZStack {
+                    BubbleStack()
+                        .matchedGeometryEffect(id: "BubbleStack", in: animation)
+                    Text("Start")
+                        .font(.system(size: 26, weight: .black, design: .monospaced))
+                        .fontWeight(.medium)
+                        .foregroundStyle(Color.accentColor)
                 }
-                .buttonStyle(.plain)
-                .scenePadding()
             }
-            .ignoresSafeArea(edges: .bottom)
+            .buttonStyle(.plain)
+            .scenePadding()
         }
     }
     
     private func startWorkout() {
         Task {
             do {
-                sessionManager.createTeams()
+                sessionManager.reset()
                 let configuration = HKWorkoutConfiguration()
                 configuration.activityType = .tennis
                 Logger.shared.debug("Creating session with configuration: \(String(describing: configuration))")
@@ -54,9 +51,8 @@ struct Start: View {
 }
 
 #Preview {
-    let sessionManager = SessionManager()
     let workoutManager = WorkoutManager.shared
     return Start()
-        .environmentObject(sessionManager)
+        .environment(SessionManager())
         .environmentObject(workoutManager)
 }

@@ -10,19 +10,24 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var workoutManager: WorkoutManager
     
+    @AppStorage("isOnboarding") var isOnboarding: Bool = true
+    
     var body: some View {
-        if workoutManager.sessionState.isActive || workoutManager.workout != nil {
-            WorkoutTabView()
+        if isOnboarding {
+            Onboarding()
         } else {
-            Home()
+            if workoutManager.sessionState.isActive || workoutManager.workout != nil {
+                WorkoutTabView()
+            } else {
+                Home()
+            }
         }
     }
 }
 
 #Preview {
-    let sessionManager = SessionManager()
     let workoutManager = WorkoutManager.shared
     return ContentView()
-        .environmentObject(sessionManager)
+        .environment(SessionManager())
         .environmentObject(workoutManager)
 }

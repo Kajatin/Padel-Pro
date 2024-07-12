@@ -9,13 +9,12 @@ import SwiftUI
 
 @main
 struct Padel_Pro_Watch_AppApp: App {
-    private let sessionManager = SessionManager()
     private let workoutManager = WorkoutManager.shared
     
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(sessionManager)
+                .environment(SessionManager())
                 .environmentObject(workoutManager)
                 .onAppear {
                     workoutManager.requestAuthorization()

@@ -13,10 +13,8 @@ struct Home: View {
     var body: some View {
         TabView(selection: $selectedTab) {
             ForEach(HomeAppScreen.allCases) { screen in
-                ZStack {
-                    screen.destination
-                        .tag(screen as HomeAppScreen?)
-                }
+                screen.destination
+                    .tag(screen as HomeAppScreen?)
             }
         }
         .tabViewStyle(.verticalPage)
@@ -25,6 +23,7 @@ struct Home: View {
 
 enum HomeAppScreen: Codable, Hashable, Identifiable, CaseIterable {
     case start
+    case settings
     
     var id: HomeAppScreen { self }
 }
@@ -35,14 +34,15 @@ extension HomeAppScreen {
         switch self {
         case .start:
             Start()
+        case .settings:
+            Settings()
         }
     }
 }
 
 #Preview {
-    let sessionManager = SessionManager()
     let workoutManager = WorkoutManager.shared
     return Home()
-        .environmentObject(sessionManager)
+        .environment(SessionManager())
         .environmentObject(workoutManager)
 }

@@ -8,6 +8,8 @@
 	<array>
 		<string>audio</string>
 	</array>
+	<key>UIStatusBarTintParameters</key>
+	<dict/>
 	<key>WKBackgroundModes</key>
 	<array>
 		<string>workout-processing</string>

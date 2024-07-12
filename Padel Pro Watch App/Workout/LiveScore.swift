@@ -8,181 +8,150 @@
 import SwiftUI
 
 struct LiveScore: View {
-    @EnvironmentObject var sessionManager: SessionManager
+    @Environment(SessionManager.self) var sessionManager
+    
+    let fontSize: CGFloat = WKInterfaceDevice.current().screenBounds.width < 190 ? 14 : 16
+    
+    @State private var showResetSheet = false
     
     var body: some View {
         NavigationStack {
-            VStack {
-                RallyScore()
+            VStack(spacing: 0) {
+                GameScore()
+                
+                Spacer()
+                
+                VStack {
+                    ForEach(0..<sessionManager.match.sets.count, id: \.self) { index in
+                        if index < sessionManager.match.sets.count {
+                            HStack(alignment: .center) {
+                                Text("Set \(index + 1)")
+                                    .font(.system(size: fontSize, weight: .bold, design: .monospaced))
+                                
+                                if sessionManager.match.sets[index].tieBreaker != nil {
+                                    Image(systemName: "rosette")
+                                }
+                                
+                                Spacer()
+                                
+                                SetScore(scores: sessionManager.match.sets[index].scores(), gamesToWin: sessionManager.match.sets[index].gamesToWin())
+                            }
+                        }
+                    }
+                }
             }
-            .containerBackground(Color.accentColor, for: .navigation)
-            .toolbarColorScheme(.light, for: .automatic)
+            .scenePadding([.horizontal, .bottom])
+            .foregroundStyle(.offWhite)
+            .containerBackground(.offBlack, for: .navigation)
             .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Badges()
+                }
                 ToolbarItem(placement: .topBarLeading) {
-                    SetScore()
+                    Button {
+                        showResetSheet = true
+                    } label: {
+                        Image(systemName: "arrow.uturn.backward")
+                    }
                 }
-                ToolbarItemGroup(placement: .bottomBar) {
-                    if sessionManager.sessionData.winner == nil {
-                        Button {
-                            sessionManager.scoreTeam(designation: .A)
-                        } label: {
-                            Image(systemName: "a.square.fill")
-                        }
-                    }
-                    
-                    if sessionManager.sessionData.winner != nil {
-                        Button {
-                            sessionManager.reset(preserveTeams: true)
-                        } label: {
-                            Image(systemName: "arrow.uturn.left")
-                        }
-                        .controlSize(.large)
-                    }
-                    
-                    if sessionManager.sessionData.winner == nil {
-                        Button {
-                            sessionManager.scoreTeam(designation: .B)
-                        } label: {
-                            Image(systemName: "plus.square.fill")
-                        }
-                    }
+            }
+            .alert("Start a new match?", isPresented: $showResetSheet) {
+                Button("Cancel", role: .cancel) {}
+                Button("Reset", role: .destructive) {
+                    sessionManager.reset()
                 }
             }
         }
-        .foregroundStyle(.black)
-    }
-}
-
-struct RallyScore: View {
-    private var emptyCell: some View = Color.clear
-        .gridCellUnsizedAxes([.horizontal, .vertical])
-    
-    @EnvironmentObject var sessionManager: SessionManager
-    
-    var body: some View {
-        HStack {
-            VStack(spacing: 10) {
-                ZStack {
-                    Image(systemName: "tennisball.fill")
-                        .if(sessionManager.sessionData.serving != .A || sessionManager.sessionData.winner != nil) { view in
-                            view.opacity(0)
-                        }
-                    
-                    Image(systemName: "crown.fill")
-                        .if(sessionManager.sessionData.winner != .A) { view in
-                            view.opacity(0)
-                        }
-                }
-                Text("\(sessionManager.sessionData.teamA?.score.point.rawValue ?? 0)")
-                    .font(.system(size: 50))
-                    .fontWeight(.bold)
-                    .foregroundStyle(.primary)
-                Spacer()
-            }
-            .frame(maxWidth: .infinity)
-            .padding(.top)
-            
-            RoundedRectangle(cornerRadius: 10)
-                .frame(width: 2)
-                .padding()
-            
-            VStack(spacing: 10) {
-                ZStack {
-                    Image(systemName: "tennisball.fill")
-                        .if(sessionManager.sessionData.serving != .B || sessionManager.sessionData.winner != nil) { view in
-                            view.opacity(0)
-                        }
-                    
-                    Image(systemName: "crown.fill")
-                        .if(sessionManager.sessionData.winner != .B) { view in
-                            view.opacity(0)
-                        }
-                }
-                Text("\(sessionManager.sessionData.teamB?.score.point.rawValue ?? 0)")
-                    .font(.system(size: 50))
-                    .fontWeight(.bold)
-                    .foregroundStyle(.primary)
-                Spacer()
-            }
-            .frame(maxWidth: .infinity)
-            .padding(.top)
-        }
-        .padding([.horizontal, .bottom])
     }
 }
 
 struct SetScore: View {
-    private var topBorder = UnevenRoundedRectangle(cornerRadii: .init(topLeading: 5, bottomLeading: 0, bottomTrailing: 0, topTrailing: 5), style: .continuous)
-    private var bottomBorder = UnevenRoundedRectangle(cornerRadii: .init(topLeading: 0, bottomLeading: 5, bottomTrailing: 5, topTrailing: 0), style: .continuous)
+    var scores: (teamAway: Int, teamHome: Int)
+    var gamesToWin: Int
     
-    @EnvironmentObject var sessionManager: SessionManager
+    let bubbleWH: CGFloat = WKInterfaceDevice.current().screenBounds.width < 190 ? 6 : 8
     
     var body: some View {
-        Grid(alignment: .leadingFirstTextBaseline) {
-            GridRow {
-                Text(sessionManager.sessionData.teamA?.slug ?? "A")
-                    .frame(minWidth: 35)
-                    .padding([.horizontal], 3)
-                    .overlay(topBorder.stroke(.secondary))
-                    .if(sessionManager.sessionData.winner == .A) { view in
-                        view
-                            .background(.secondary)
-                    }
-                ForEach(sessionManager.sessionData.sets) { set in
-                    Text("\(set.pointsForTeam(designation: .A))")
-                        .frame(minWidth: 10)
-                        .padding([.horizontal], 3)
-                        .if(set.teamLeadingIs(designation: .A)) { view in
-                            view
-                                .background(.secondary)
-                        }
-                        .clipShape(topBorder)
-                        .overlay(topBorder.stroke(.secondary))
+        VStack(alignment: .leading, spacing: 1) {
+            HStack(spacing: 1) {
+                let score = scores.teamAway
+                let scoreMissing = gamesToWin - score
+                ForEach(0..<score, id: \.self) { _ in
+                    Circle()
+                        .frame(width: bubbleWH)
+                        .foregroundStyle(.offWhite)
+                }
+                ForEach(0..<scoreMissing, id: \.self) { _ in
+                    Circle()
+                        .frame(width: bubbleWH)
+                        .foregroundStyle(.offGray)
                 }
             }
             
-            GridRow {
-                Text(sessionManager.sessionData.teamB?.slug ?? "B")
-                    .frame(minWidth: 35)
-                    .padding([.horizontal], 3)
-                    .overlay(bottomBorder.stroke(.secondary))
-                    .if(sessionManager.sessionData.winner == .B) { view in
-                        view
-                            .background(.secondary)
-                    }
-                ForEach(sessionManager.sessionData.sets) { set in
-                    Text("\(set.pointsForTeam(designation: .B))")
-                        .frame(minWidth: 10)
-                        .padding([.horizontal], 3)
-                        .if(set.teamLeadingIs(designation: .B)) { view in
-                            view
-                                .background(.secondary)
-                        }
-                        .clipShape(bottomBorder)
-                        .overlay(bottomBorder.stroke(.secondary))
+            HStack(spacing: 1) {
+                let score = scores.teamHome
+                let scoreMissing = gamesToWin - score
+                ForEach(0..<score, id: \.self) { _ in
+                    Circle()
+                        .frame(width: bubbleWH)
+                        .foregroundStyle(.offWhite)
+                }
+                ForEach(0..<scoreMissing, id: \.self) { _ in
+                    Circle()
+                        .frame(width: bubbleWH)
+                        .foregroundStyle(.offGray)
                 }
             }
         }
-        .padding([.leading], 3)
+        .frame(height: 2*bubbleWH)
     }
 }
 
-extension View {
-    /// Applies the given transform if the given condition evaluates to `true`.
-    /// - Parameters:
-    ///   - condition: The condition to evaluate.
-    ///   - transform: The transform to apply to the source `View`.
-    /// - Returns: Either the original `View` or the modified `View` if the condition is `true`.
-    @ViewBuilder func `if`<Content: View>(_ condition: Bool, transform: (Self) -> Content) -> some View {
-        if condition {
-            transform(self)
-        } else {
-            self
+struct Badges: View {
+    @Environment(SessionManager.self) var sessionManager
+    
+    var body: some View {
+        HStack {
+            Image(systemName: "tennisball.fill")
+            
+            if sessionManager.match.currentSet().tieBreaker != nil {
+                Image(systemName: "rosette")
+            }
+            
+            if sessionManager.match.matchType == .tieBreak {
+                Image(systemName: "triangle.fill")
+            }
+            
+            if sessionManager.match.currentSet().setType == .mini {
+                Image(systemName: "bolt.circle.fill")
+            }
+        }
+        .foregroundStyle(.offGray)
+    }
+}
+
+struct GameScore: View {
+    @Environment(SessionManager.self) var sessionManager
+    
+    let fontSize: CGFloat = WKInterfaceDevice.current().screenBounds.width < 190 ? 12 : 14
+    
+    var body: some View {
+        VStack(spacing: 6) {
+            HStack(spacing: 0) {
+                Text("Away")
+                Spacer()
+                Text("Home")
+            }
+            .padding(.horizontal)
+            .font(.system(size: fontSize, weight: .medium, design: .monospaced))
+            .foregroundStyle(.offGray)
+            
+            ScorePill(winner: sessionManager.match.winner())
         }
     }
 }
 
 #Preview {
-    let sessionManager = SessionManager()
-    return LiveScore().environmentObject(sessionManager)
+    LiveScore()
+        .environment(SessionManager())
 }

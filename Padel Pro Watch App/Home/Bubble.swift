@@ -11,17 +11,17 @@ struct BubbleStack: View {
     var body: some View {
         ZStack {
             Bubble(scale: 0.85, rotation: -60, scaleEnd: 1.15, rotationEnd: 50, duration: 6)
-                .foregroundColor(.blue)
-                .opacity(0.2)
+                .foregroundColor(Color(red: 160/255, green: 142/255, blue: 124/255))
+                .opacity(0.7)
             Bubble(scale: 0.85, rotation: -120, scaleEnd: 1.15, rotationEnd: 50, duration: 10)
-                .foregroundColor(.yellow)
-                .opacity(0.1)
+                .foregroundColor(Color(red: 87/255, green: 92/255, blue: 108/255))
+                .opacity(0.7)
             Bubble(scale: 0.9, rotation: 90, scaleEnd: 1.1, rotationEnd: -90, duration: 8)
-                .foregroundColor(.green)
-                .opacity(0.1)
+                .foregroundColor(Color(red: 160/255, green: 149/255, blue: 124/255))
+                .opacity(0.8)
             Bubble(scale: 1, rotation: 60, scaleEnd: 0.9, rotationEnd: -50, duration: 12)
-                .foregroundColor(.green)
-                .opacity(0.2)
+                .foregroundColor(Color(red: 77/255, green: 95/255, blue: 98/255))
+                .opacity(0.7)
         }
     }
 }
